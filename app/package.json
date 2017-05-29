@@ -1,0 +1,32 @@
+{
+  "name": "sandwichtimer",
+  "productName": "SandwichTimer",
+  "bundleId": "com.vitorgalvao.sandwichtimer",
+  "version": "1.0.0",
+  "description": "Timer app controllable via CLI",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js",
+    "build": "npm run build-macos",
+    "build-macos": "electron-packager . \"$npm_package_productName\" --overwrite --prune --platform=darwin --arch=x64 --app-bundle-id=\"$npm_package_bundleId\" --app-version=\"$npm_package_version\" --icon=../icon/icon.icns && /usr/libexec/PlistBuddy -c 'add LSUIElement string 1' \"$npm_package_productName-darwin-x64/$npm_package_productName.app/Contents/Info.plist\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitorgalvao/sandwichtimer.git"
+  },
+  "keywords": [
+    "electron",
+    "pomodoro",
+    "timer"
+  ],
+  "author": "Vítor Galvão",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/vitorgalvao/sandwichtimer/issues"
+  },
+  "homepage": "https://github.com/vitorgalvao/sandwichtimer",
+  "devDependencies": {
+    "electron-packager": "^9.1.0",
+    "electron": "^1.6.15"
+  }
+}
