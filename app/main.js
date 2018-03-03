@@ -1,5 +1,3 @@
-'use strict';
-
 const appName = 'SandwichTimer';
 
 // Global references to avoid problems on garbage collection
