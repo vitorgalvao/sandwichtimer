@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/vitorgalvao/sandwichtimer",
   "devDependencies": {
-    "electron-packager": "^9.1.0",
-    "electron": "^1.6.15"
+    "electron-packager": "^11.0.1",
+    "electron": "^1.8.2"
   }
 }
