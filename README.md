@@ -9,7 +9,7 @@ To support my continued open-source work, pick a method:
 Use a CLI to set timers. Built for use with the [SandwichTimer Alfred Workflow](https://github.com/vitorgalvao/alfred-workflows/tree/master/SandwichTimer).
 
 ## Usage
- 
+
 SandwichTimer was initally built to be a [Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) timer controllable via CLI, but it can be used as a regular timer. While you can simply open the app and a Pomodoro cycle will start, it’s meant to be called with its CLI:
 
 ```bash
@@ -47,6 +47,8 @@ Built with [Electron](http://electron.atom.io).
 - Run: `npm start`
 - Build for macOS: `npm run build-macos`
 - Build for all platforms: `npm run build`
+- Build for macOS and package as a zip: `npm run package-macos`
+- Build for all platforms and package as a zip: `npm run package`
 
 Currently, only macOS is supported. I do not intend to officially support other platforms in the near future since I cannot consistently and reliably test on them, but am willing to add support if someone wants to collaborate in doing the legwork.
 
