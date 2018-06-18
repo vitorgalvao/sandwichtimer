@@ -121,7 +121,7 @@ async function countdown(minutesToWait) {
 }
 
 app.on('ready', function(){
-  // For testing, increase array position by one
+  if (process.defaultApp) process.argv.shift(); // Normalise argument positions when running with electron and built app
   const argument = process.argv[1];
 
   if (argument === 'quit') {
