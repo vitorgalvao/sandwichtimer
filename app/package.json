@@ -1,6 +1,6 @@
 {
   "name": "sandwichtimer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Timer app controllable via CLI",
   "build": {
     "appId": "com.vitorgalvao.sandwichtimer",
