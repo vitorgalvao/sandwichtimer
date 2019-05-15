@@ -14,7 +14,7 @@ const menuTemplate = [
 ]
 const trayMenu = Menu.buildFromTemplate(menuTemplate);
 
-let globalCountdownId = Math.random(); // By setting a global ID each timer is checked against, we ensure they are terminated correctly. This way we can have a high setTimeout without worrying about overlapping timers.
+let globalCountdownId = Date.now(); // By setting a global ID each timer is checked against, we ensure they are terminated correctly. This way we can have a high setTimeout without worrying about overlapping timers.
 
 function asyncWait(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -89,7 +89,7 @@ async function showNotification(time) {
 }
 
 function stopTimer() {
-  globalCountdownId = Math.random();
+  globalCountdownId = Date.now();
   showMenuOption('Start');
   appTray.setTitle('');
 }
