@@ -5,7 +5,7 @@ let appTray;
 let notification;
 
 const {app, Menu, Notification, Tray} = require('electron');
-const exec = require('child_process').exec;
+const {spawn} = require('child_process');
 const menuTemplate = [
   { label: 'Start Pomodoro', click: function () { runPomodoro('work'); } },
   { label: 'Stop Timer', click: function () { stopTimer(); } },
@@ -125,7 +125,7 @@ app.on('ready', function(){
   const argument = process.argv[1];
 
   if (argument === 'quit') {
-    exec('pkill -i ' + appName);
+    spawn('pkill', ['-i', appName]);
     app.quit();
     return; // if we do not return, the next lines will still execute before the app quits and we'll get a flash of a new instance
   }
