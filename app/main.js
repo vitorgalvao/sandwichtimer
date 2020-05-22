@@ -219,7 +219,6 @@ app.on('ready', () => {
   let trayTitle;
   if (suppliedTitle) {
     trayTitle = suppliedTitle;
-    trayTitle = suppliedTitle;
   } else if (startPomodoro) {
     trayTitle = 'Pomodoro';
   } else {
