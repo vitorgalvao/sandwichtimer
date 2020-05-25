@@ -25,8 +25,8 @@ Calling it with a number will initiate a timer. Its notification will continue f
 
 Calling it with `quit` as the argument will exit all running timers.
 
-Any optional additional arguments are treated as the title to appear menu tray for the timer, which can be used to distinguish multiple timers.
-This appears as a disabled first item in the menu, as not to take up precious room on the bar itself.
+For custom minute timers, any optional additional arguments are treated as the title to appear menu tray for the timer, which can be used to distinguish multiple timers.
+This appears as a disabled first item in the menu, as not to take up precious room on the bar itself, and will show on the notifications when done.
 
 ```bash
 SandwichTimer.app/Contents/MacOS/SandwichTimer 20 Check Laundry

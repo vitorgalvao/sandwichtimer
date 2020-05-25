@@ -21,7 +21,6 @@
     "build-macos": "electron-builder --dir",
     "package": "npm run package-macos",
     "package-macos": "electron-builder",
-    "lint": "eslint .",
     "clean": "rm -rf dist"
   },
   "repository": {
@@ -41,75 +40,6 @@
   "homepage": "https://github.com/vitorgalvao/sandwichtimer",
   "devDependencies": {
     "electron": "^5.0.1",
-    "electron-builder": "^20.40.2",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.20.2"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true,
-      "es6": true
-    },
-    "extends": [
-      "airbnb-base"
-    ],
-    "rules": {
-      "func-names": [
-        "error",
-        "never"
-      ],
-      "max-len": [
-        "error",
-        {
-          "code": 160
-        }
-      ],
-      "lines-between-class-members": "off",
-      "import/no-extraneous-dependencies": [
-        "error"
-      ],
-      "import/extensions": [
-        "error",
-        "always",
-        {
-          "js": "never"
-        }
-      ],
-      "indent": [
-        "error",
-        2,
-        {
-          "FunctionDeclaration": {
-            "parameters": "first"
-          },
-          "FunctionExpression": {
-            "parameters": "first"
-          },
-          "SwitchCase": 1
-        }
-      ],
-      "no-param-reassign": [
-        "error",
-        {
-          "props": false
-        }
-      ]
-    },
-    "settings": {
-      "import/resolver": {
-        "node": {
-          "extensions": [
-            ".js"
-          ]
-        }
-      }
-    },
-    "parserOptions": {
-      "parser": {
-        "ecmaVersion": 6
-      }
-    }
+    "electron-builder": "^20.40.2"
   }
 }
