@@ -156,14 +156,10 @@ function parseArgs() {
   }
 
   // usage is: sandwichtimer <minutes | pomodoro | quit> [title]
-  //   where title could be given in single or separate words
-  // from Alfred, all args will be given as a single first argument
-  // from CLI, it could be any number of arguments, so concat them all together
-  // so they can be processed uniformly
-  const args = process.argv.slice(1).join(' ').split(' ');
+  const args = process.argv.slice(1);
 
   const mainArgument = args.shift();
-  const trayTitle = args.join(' ');
+  const trayTitle = args.shift();
   return [mainArgument, trayTitle];
 }
 
