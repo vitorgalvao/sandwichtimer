@@ -131,7 +131,7 @@ async function runPomodoro(time) {
 function setTrayMenu(trayTitle) {
   const menu = [...menuTemplate];
 
-  // if given a title, prepend to the template,
+  // If given a title, prepend to the template,
   // else, replace menu with one with no title
   if (trayTitle) {
     const separator = { type: 'separator' };
@@ -155,7 +155,7 @@ function parseArgs() {
     process.argv.shift();
   }
 
-  // usage is: sandwichtimer <minutes | pomodoro | quit> [title]
+  // Usage: sandwichtimer <minutes | pomodoro | quit> [title]
   const args = process.argv.slice(1);
 
   const mainArgument = args.shift();
@@ -170,7 +170,7 @@ app.on('ready', () => {
     spawn('pkill', ['-i', appName]);
     app.quit();
 
-    // if we do not return, the next lines will still execute before the app quits and we'll get a flash of a new instance
+    // If we do not return, the next lines will still execute before the app quits and we'll get a flash of a new instance
     return;
   }
 
