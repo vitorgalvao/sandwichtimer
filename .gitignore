@@ -1,2 +1,15 @@
 node_modules
+log
+tmp/**/*
+.idea/*
+.idea/**/*
+*.iml
+*.sublime-*
+.console_history
+*.swp
 .DS_Store
+tmp
+.env
+yarn-error.log
+package-lock.json
+dist
