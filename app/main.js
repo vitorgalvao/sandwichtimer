@@ -1,5 +1,5 @@
 const appName = 'SandwichTimer';
-const osMajorRelease = parseInt(require('os').release().replace(/^(\d+)\..*/, "$1"));
+const osMajorRelease = parseInt(require('os').release().split('.')[0]);
 
 // Global references to avoid problems on garbage collection
 let appTray;
