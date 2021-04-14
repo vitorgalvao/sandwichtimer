@@ -1,4 +1,5 @@
 const appName = 'SandwichTimer';
+const osMajorRelease = parseInt(require('os').release().split('.')[0]);
 
 // Global references to avoid problems on garbage collection
 let appTray;
@@ -47,14 +48,14 @@ function showNotification(time) {
     options = {
       title: 'Finished work time',
       body: 'Start the break at any time',
-      sound: 'Blow',
+      sound: osMajorRelease >= 20 ? 'Breeze' : 'Blow',
       actions: [{ type: 'button', text: 'Start break' }],
     };
   } else if (time === 'break') {
     options = {
       title: 'Break is over',
       body: 'Ready to start a new pomodoro whenever you want',
-      sound: 'Blow',
+      sound: osMajorRelease >= 20 ? 'Breeze' : 'Blow',
       actions: [{ type: 'button', text: 'New pomodoro' }],
     };
   } else {
@@ -63,7 +64,7 @@ function showNotification(time) {
     options = {
       title: title ? `${title} timer done!` : 'Timer done!',
       body: `It was set for ${time} ${plurality}`,
-      sound: 'Submarine',
+      sound: osMajorRelease >= 20 ? 'Submerge' : 'Submarine',
       actions: [{ type: 'button', text: 'Quit' }],
     };
   }
